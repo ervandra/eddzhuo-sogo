@@ -2,4 +2,93 @@
 
 body {
   background: $white;
+  max-width: 600px;
+  margin: 0 auto;
+  &.login {
+    background: $body;
+  }
+  &.collapse {
+    display: block !important;
+  }
+  &.show {
+    .off-canvas {
+      transform: translateX(0);
+    }
+  }
+}
+
+.login-form {
+  min-height: 100%;
+  min-height: 100vh;
+  background: $body;
+}
+
+#header {
+  position: fixed;
+  z-index: 98;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255,255,255,.3);
+  @supports ((position: -webkit-sticky) or (position: sticky)) {
+		position: -webkit-sticky;
+    position: sticky;
+  }
+  + * {
+    margin-top: 60px;
+    @supports ((position: -webkit-sticky) or (position: sticky)) {
+      margin-top: 0;
+    }
+  }
+  .top-header {
+    .openMenu {
+      display: block;
+      padding: 0;
+      text-align: center;
+      width: 60px;
+      line-height: 60px;
+      margin: 0;
+      background: #000;
+      color: $white;
+      .fa {
+        font-size: $sizeM*1.5;
+        width: 1.5rem;
+        height: 1.5rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+}
+
+.off-canvas {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 260px;
+  overflow: hidden;
+  overflow-y: auto;
+  background: #000;
+  transform: translateX(-260px);
+  transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+}
+
+.off-canvas-menu {
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      display: block;
+      a {
+        display: block;
+        padding: 0 1.5rem;
+        font-size: $sizeM;
+        line-height: 1.5;
+        .fa {
+          margin-right: .75rem;
+        }
+      }
+    }
+  }
 }

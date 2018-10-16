@@ -4,29 +4,44 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Sogo4d">
-  <meta name="author" content="Ervandra Halim">
+  <meta name="description" content="WAP">
+  <meta name="author" content="WAP">
   <link rel="icon" href="favicon.ico">
-  <title>Login | Sogo4d</title>
+  <title>Login | WAP</title>
   <link href="../lib/css/bootstrap.min.css" rel="stylesheet">
   <link href="../lib/css/fontface.min.css" rel="stylesheet">
-  <link href="../lib/css/chosen.min.css" rel="stylesheet">
   <link href="../css/index.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="collapse">
 
-  <h1>Login Page</h1>
+  <div class="login-form">
+    <header id="header">
+      <div class="top-header">
+        <a href="#" class="openMenu" data-toggle="collapse" data-target="body"><span class="fa fa-bars"></span></a>
+      </div>
+      <div class="off-canvas">
+        <div class="logotype">SOGO 4D</div>
+        <div class="off-canvas-menu">
+          <ul>
+            <li><a href="#"><span class="fa fa-home"></span>Home</a></li>
+            <li><a href="#"><span class="fa fa-user"></span>Daftar</a></li>
+            <li><a href="#"><span class="fa fa-calendar"></span>Keluaran Terakhir</a></li>
+            <li><a href="#"><span class="fa fa-globe"></span>WAP Old Version</a></li>
+            <li><a href="#"><span class="fa fa-comments"></span>Live Chat</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="login-logo">
+      <a href="#"><img src="../img/logo.png" alt="LOGO" /></a>
+    </div>
+  </div>
 
   <script src="../lib/js/jquery.js"></script>
   <script src="../lib/js/bootstrap.min.js"></script>
   <script src="../lib/js/chosen.jquery.min.js"></script>
   <script src="../js/index.js"></script>
-  <script>
-    jQuery(document).ready(function (e) {
-      jQuery(".chosen-select").chosen();
-    })
-  </script>
 </body>
 
 </html>
