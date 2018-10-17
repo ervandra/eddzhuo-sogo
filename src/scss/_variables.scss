@@ -2,6 +2,8 @@ $white: #ffffff;
 
 $body: rgba(0,0,0,.87);
 $copy: rgba(0,0,0,.54);
+$bodyInverse: rgba(255,255,255,.87);
+$copyInverse: rgba(255,255,255,.54);
 
 $brandColor: #0094D1;
 $brandColorActive: #0776a5;
@@ -13,6 +15,7 @@ $radius: 4px;
 $sizeL: 1.25rem;
 $sizeM: 1rem;
 $sizeS: .875rem;
+$sizeXS: .875rem;
 
 $boxShadow: 0 4px 8px rgba(0,0,0,.38);
 $transition: all ease .1s;

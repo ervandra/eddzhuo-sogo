@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="description" content="WAP">
   <meta name="author" content="WAP">
   <link rel="icon" href="favicon.ico">
@@ -13,28 +13,65 @@
   <link href="../css/index.css" rel="stylesheet">
 </head>
 
-<body class="collapse">
+<body class="login">
 
-  <div class="login-form">
-    <header id="header">
-      <div class="top-header">
-        <a href="#" class="openMenu" data-toggle="collapse" data-target="body"><span class="fa fa-bars"></span></a>
+  <header id="header" class="dashboard-nav">
+    <div class="navigation">
+      <div class="dashboard-menu-toggle">
+        <a class="dashboard-toggle"><span class="fa fa-bars"></span></a>
       </div>
-      <div class="off-canvas">
-        <div class="logotype">SOGO 4D</div>
-        <div class="off-canvas-menu">
-          <ul>
-            <li><a href="#"><span class="fa fa-home"></span>Home</a></li>
-            <li><a href="#"><span class="fa fa-user"></span>Daftar</a></li>
-            <li><a href="#"><span class="fa fa-calendar"></span>Keluaran Terakhir</a></li>
-            <li><a href="#"><span class="fa fa-globe"></span>WAP Old Version</a></li>
-            <li><a href="#"><span class="fa fa-comments"></span>Live Chat</a></li>
-          </ul>
+
+      <div class="dashboard-wrapper collapse-menu"></div>
+
+      <div class="dashboard-menu collapse-menu" id="dashboard-menu">
+
+        <div class="close-dashboard-menu">
+          <a href="#" class="close-menu"><span class="fa fa-close"></span></a>
+          <div class="logotype">
+            <h1><a href="#">Sogo 4d</a></h1>
+          </div>
         </div>
+
+        <nav id="mainmenu">
+          <ul>
+            <li class="active"><a href="dashboard.html"><span class="fa fa-dashboard"></span>Dashboard</a></li>
+            <li><a href="order.html"><span class="fa fa-briefcase"></span>Order</li>
+            <li><a href="product.html"><span class="fa fa-archive"></span>Product</a></li>
+            <li><a href="settings.html"><span class="fa fa-link"></span>Settings</a></li>
+            <li><a href="help.html"><span class="fa fa-question-circle"></span>Help</a></li>
+          </ul>
+        </nav>
+
       </div>
-    </header>
+    </div>
+  </header>
+
+  <div class="login-widget">
     <div class="login-logo">
-      <a href="#"><img src="../img/logo.png" alt="LOGO" /></a>
+      <img src="../img/logo.png" alt="LOGO">
+    </div>
+    <div class="login-news">
+      <marquee>Selamat Datang di WWW.SOGO4D.COM * Min Depo 10.000 * Min WD 50.000 * Minimal betting 500 perak * BEBAS
+        LINE * NO LIMIT BET * DICS 29% / 58 % / 66% * Proses depo/wd super cepat !! Silakan bergabung bersama kami
+        SALAM JP !!!</marquee>
+    </div>
+    <div class="login-form">
+      <form action="#">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="verify">Verifikasi</label>
+          <input type="text" id="verify" name="verify" class="form-control">
+        </div>
+        <button class="btn btn-danger btn-block btn-lg" type="submit">Login</button>
+        <a class="btn btn-warning btn-block btn-lg" href="daftar.html">Daftar</a>
+      </form>
     </div>
   </div>
 

@@ -25,14 +25,29 @@ img {
     max-width: 100%;
 }
 
+.container {
+    max-width: 390px;
+}
+
+html {
+    position: relative;
+    margin: 0 auto;
+    background: #fff;
+}
+
 body {
+    overflow: hidden;
+    position: relative;
     background: #ffffff;
-    max-width: 600px;
+    max-width: 360px;
+    min-height: 100%;
+    min-height: 100vh;
     margin: 0 auto;
 }
 
 body.login {
-    background: rgba(0, 0, 0, 0.87);
+    background-color: #1f2532;
+    background-image: linear-gradient(343deg, #4c68b1, black 98%);
 }
 
 body.collapse {
@@ -47,7 +62,6 @@ body.show .off-canvas {
 .login-form {
     min-height: 100%;
     min-height: 100vh;
-    background: rgba(0, 0, 0, 0.87);
 }
 
 #header {
@@ -56,7 +70,6 @@ body.show .off-canvas {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.3);
 }
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {
@@ -76,56 +89,167 @@ body.show .off-canvas {
     }
 }
 
-#header .top-header .openMenu {
+#header .dashboard-menu-toggle .dashboard-toggle {
     display: block;
+    cursor: pointer;
     padding: 0;
     text-align: center;
     width: 60px;
     line-height: 60px;
     margin: 0;
-    background: #000;
     color: #ffffff;
 }
 
-#header .top-header .openMenu .fa {
+#header .dashboard-menu-toggle .dashboard-toggle .fa {
     font-size: 1.5rem;
     width: 1.5rem;
     height: 1.5rem;
     line-height: 1.5rem;
 }
 
-.off-canvas {
-    position: fixed;
-    z-index: 99;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 260px;
-    overflow: hidden;
-    overflow-y: auto;
-    background: #000;
-    -webkit-transform: translateX(-260px);
-    transform: translateX(-260px);
-    -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-}
-
-.off-canvas-menu ul {
+#mainmenu ul {
     margin: 0;
     padding: 0;
 }
 
-.off-canvas-menu ul li {
+#mainmenu ul li {
     display: block;
 }
 
-.off-canvas-menu ul li a {
+#mainmenu ul li a {
     display: block;
     padding: 0 1.5rem;
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 40px;
+    color: #fff;
 }
 
-.off-canvas-menu ul li a .fa {
+#mainmenu ul li a .fa {
     margin-right: .75rem;
+    color: #0094D1;
+}
+
+.dashboard-menu {
+    position: fixed;
+    z-index: 98;
+    top: 0;
+    width: 260px;
+    bottom: 0;
+    height: 100vh !important;
+    -webkit-transition: all 0.1s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    transition: all 0.1s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    opacity: 0;
+    visibility: hidden;
+    background-color: #1f2532;
+    background-image: linear-gradient(343deg, #4c68b1, black 82%);
+    -webkit-box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-menu.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dashboard-menu .close-dashboard-menu {
+    text-align: center;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.dashboard-menu .close-dashboard-menu h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 60px;
+    line-height: 60px;
+}
+
+.dashboard-menu .close-dashboard-menu a {
+    width: 100%;
+    color: #ffffff;
+    margin: 0;
+}
+
+.dashboard-menu .close-dashboard-menu a .fa {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    line-height: 60px;
+}
+
+.dashboard-menu .close-dashboard-menu a.close-menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: left;
+}
+
+.dashboard-wrapper {
+    position: fixed;
+    top: 0;
+    height: 100vh !important;
+    z-index: 90;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+    width: 100%;
+    max-width: 360px;
+}
+
+.dashboard-wrapper.show {
+    display: block;
+}
+
+.login-widget {
+    padding: 1.5rem;
+}
+
+.login-widget .login-logo {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.login-widget .login-logo img {
+    max-height: 48px;
+}
+
+.login-widget .login-news {
+    margin-bottom: 1.5rem;
+}
+
+.login-widget .login-news marquee {
+    color: #ffffff;
+    font-size: 0.875rem;
+}
+
+.login-widget .login-form label {
+    color: rgba(255, 255, 255, 0.54);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+}
+
+.login-widget .login-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.login-widget .login-form .form-control {
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 0.875rem;
+    background: none;
+    border-radius: 0;
+    border: none;
+    padding: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.54);
+}
+
+.login-widget .login-form .btn {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.login-widget .login-form .btn + .btn {
+    margin-top: 1.5rem;
 }

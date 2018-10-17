@@ -1,11 +1,26 @@
 @import 'base';
 
+.container {
+  max-width: 390px;
+}
+
+html {
+  position: relative;
+  margin: 0 auto;
+  background: #fff;
+}
 body {
+  overflow: hidden;
+  position: relative;
   background: $white;
-  max-width: 600px;
+  max-width: 360px;
+  min-height: 100%;
+  min-height: 100vh;
   margin: 0 auto;
   &.login {
-    background: $body;
+    background-color: #1f2532;
+    background-image: -webkit-linear-gradient(107deg, #4c68b1, black 98%);
+    background-image: linear-gradient(343deg, #4c68b1, black 98%);
   }
   &.collapse {
     display: block !important;
@@ -20,7 +35,6 @@ body {
 .login-form {
   min-height: 100%;
   min-height: 100vh;
-  background: $body;
 }
 
 #header {
@@ -29,7 +43,6 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(255,255,255,.3);
   @supports ((position: -webkit-sticky) or (position: sticky)) {
 		position: -webkit-sticky;
     position: sticky;
@@ -40,15 +53,15 @@ body {
       margin-top: 0;
     }
   }
-  .top-header {
-    .openMenu {
+  .dashboard-menu-toggle {
+    .dashboard-toggle {
       display: block;
+      cursor: pointer;
       padding: 0;
       text-align: center;
       width: 60px;
       line-height: 60px;
       margin: 0;
-      background: #000;
       color: $white;
       .fa {
         font-size: $sizeM*1.5;
@@ -60,21 +73,8 @@ body {
   }
 }
 
-.off-canvas {
-  position: fixed;
-  z-index: 99;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 260px;
-  overflow: hidden;
-  overflow-y: auto;
-  background: #000;
-  transform: translateX(-260px);
-  transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-}
 
-.off-canvas-menu {
+#mainmenu {
   ul {
     margin: 0;
     padding: 0;
@@ -84,10 +84,122 @@ body {
         display: block;
         padding: 0 1.5rem;
         font-size: $sizeM;
-        line-height: 1.5;
+        line-height: 40px;
+        color: #fff;
         .fa {
           margin-right: .75rem;
+          color: $brandColor;
         }
+      }
+    }
+  }
+}
+
+.dashboard-menu {
+  position: fixed;
+  z-index: 98;
+  top: 0;
+  width: 260px;
+  bottom: 0;
+  height: 100vh !important;
+  transition: all 0.1s cubic-bezier(0.685, 0.0473, 0.346, 1);
+  opacity:0;
+  visibility: hidden;
+  background-color: #1f2532;
+  background-image: -webkit-linear-gradient(107deg, #4c68b1, black 82%);
+  background-image: linear-gradient(343deg, #4c68b1, black 82%);
+  box-shadow: 0 0 1.5rem rgba(0,0,0,.3);
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  .close-dashboard-menu {
+    text-align: center;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;;
+    h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      height: 60px;
+      line-height: 60px;
+    }
+    a {
+      width: 100%;
+      color: $white;
+      margin: 0;
+      .fa {
+        width: 60px;
+        height: 60px;
+        font-size: $sizeM*1.5;
+        line-height: 60px;
+      }
+      &.close-menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.dashboard-wrapper {
+  position: fixed;
+  top: 0;
+  height: 100vh !important;
+  z-index: 90;
+  background: rgba(0,0,0,.3);
+  display: none;
+  width: 100%;
+  max-width: 360px;
+  &.show {
+    display: block;
+  }
+}
+
+.login-widget {
+  padding: 1.5rem;
+  .login-logo {
+    text-align: center;
+    img {
+      max-height: 48px;
+    }
+    margin-bottom: $mb;
+  }
+  .login-news {
+    margin-bottom: $mb;
+    marquee {
+      color: $white;
+      font-size: $sizeS;
+    }
+  }
+  .login-form {
+    label {
+      color: $copyInverse;
+      font-size: $sizeXS;
+      text-transform: uppercase;
+    }
+    .form-group {
+      margin-bottom: $mb;
+    }
+    .form-control {
+      color: $bodyInverse;
+      font-size: $sizeS;
+      background: none;
+      border-radius: 0;
+      border: none;
+      padding: 0;
+      border-bottom: 1px solid $copyInverse;
+    }
+    .btn {
+      font-size: $sizeM;
+      font-weight: bold;
+      text-transform: uppercase;
+      + .btn {
+        margin-top: $mb;
       }
     }
   }
