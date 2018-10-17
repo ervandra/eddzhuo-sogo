@@ -7,7 +7,7 @@
   <meta name="description" content="WAP">
   <meta name="author" content="WAP">
   <link rel="icon" href="favicon.ico">
-  <title>Singapore | WAP</title>
+  <title>Deposit | WAP</title>
   <link href="../lib/css/bootstrap.min.css" rel="stylesheet">
   <link href="../lib/css/fontface.min.css" rel="stylesheet">
   <link href="../lib/css/chosen.min.css" rel="stylesheet">
@@ -20,7 +20,7 @@
     <div class="navigation">
       <div class="dashboard-menu-toggle">
         <a class="dashboard-toggle"><span class="fa fa-bars"></span></a>
-        <h1>Singapore</h1>
+        <h1>Deposit</h1>
       </div>
 
       <div class="dashboard-wrapper collapse-menu"></div>
@@ -62,28 +62,24 @@
       <div class="row">
         <div class="col">
 
-          <ul class="breadcrumbs">
-            <li class="current btn btn-sm btn-info disabled">Singapore</li>
-          </ul>
-          <div class="section" id="product-detail">
-            <div class="product-info">
-              <h5><span class="fa fa-tag"></span> <strong>SGP-341</strong> [www.sgptoto.com]</h5>
-              <h5><span class="fa fa-calendar"></span> Senin - Kamis</h5>
-              <h5><span class="fa fa-clock-o"></span> Jam tutup: 17:00</h5>
-              <h5><span class="fa fa-calendar-check-o"></span> Pendundian: 17:45</h5>
-            </div>
-            <hr>
-            <ul class="block-link">
-              <li><a href="product-category.html" class="btn btn-block btn-primary">Singapore</a></li>
-              <li><a href="#" class="btn btn-block btn-primary">HK Siang</a></li>
-              <li><a href="#" class="btn btn-block btn-primary">Sidney</a></li>
-              <li><a href="#" class="btn btn-block btn-primary">Malaysia Siang</a></li>
-              <li><a href="#" class="btn btn-block btn-primary">Singapore 45 </a></li>
-              <li><a href="#" class="btn btn-block btn-primary">Geylang </a></li>
-              <li><a href="#" class="btn btn-block btn-primary">Macau </a></li>
-              <li><a href="#" class="btn btn-block btn-primary">Qatar </a></li>
-              <li><a href="#" class="btn btn-block btn-primary">HK Malam</a></li>
-            </ul>
+          <div class="section" id="deposit">
+            <form action="#">
+              <div class="form-group">
+                <label for="rekening-tujuan">Rekening Tujuan</label>
+                <input type="text" id="rekening-tujuan" name="rekening-tujuan" class="form-control" value="BCA 012345678 Tri Handayani"
+                  disabled>
+              </div>
+              <div class="form-group">
+                <label for="rekening-asal">Rekening Asal</label>
+                <input type="text" id="rekening-asal" name="rekening-asal" class="form-control" value="BCA 987653422 Tommy Putra"
+                  disabled>
+              </div>
+              <div class="form-group">
+                <label for="jumlah">Jumlah</label>
+                <input type="text" id="jumlah" name="jumlah" class="form-control" required>
+              </div>
+              <button class="btn btn-primary btn-lg btn-block" type="submit">Konfirmasi Deposit</button>
+            </form>
           </div>
 
         </div>

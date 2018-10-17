@@ -322,11 +322,13 @@ label {
     border-bottom: 1px solid rgba(0, 0, 0, 0.54);
 }
 
-.form-control:hover, .form-control:focus {
+.form-control:focus:not(:disabled) {
     background: none;
 }
 
 #content {
+    min-height: 100%;
+    min-height: calc(100vh - 150px);
     padding: 1.5rem 0;
 }
 

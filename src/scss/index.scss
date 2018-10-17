@@ -240,12 +240,14 @@ label {
   border: none;
   padding: 0;
   border-bottom: 1px solid $copy;
-  &:hover, &:focus {
+  &:focus:not(:disabled) {
     background: none;
   }
 }
 
 #content {
+  min-height: 100%;
+  min-height: calc(100vh - 150px);
   padding: 1.5rem 0;
 }
 
