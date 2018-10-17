@@ -203,7 +203,7 @@ body.show .off-canvas {
 }
 
 .login-widget {
-    padding: 1.5rem;
+    padding: 0 1.5rem;
 }
 
 .login-widget .login-logo {
@@ -228,10 +228,19 @@ body.show .off-canvas {
     color: rgba(255, 255, 255, 0.54);
     font-size: 0.875rem;
     text-transform: uppercase;
+    margin: 0;
 }
 
 .login-widget .login-form .form-group {
     margin-bottom: 1.5rem;
+}
+
+.login-widget .login-form .captcha {
+    margin-bottom: .5rem;
+}
+
+.login-widget .login-form .captcha img {
+    width: 100%;
 }
 
 .login-widget .login-form .form-control {

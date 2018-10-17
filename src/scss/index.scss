@@ -161,7 +161,7 @@ body {
 }
 
 .login-widget {
-  padding: 1.5rem;
+  padding: 0 1.5rem;
   .login-logo {
     text-align: center;
     img {
@@ -181,9 +181,16 @@ body {
       color: $copyInverse;
       font-size: $sizeXS;
       text-transform: uppercase;
+      margin: 0;
     }
     .form-group {
       margin-bottom: $mb;
+    }
+    .captcha {
+      margin-bottom: .5rem;
+      img {
+        width: 100%;
+      }
     }
     .form-control {
       color: $bodyInverse;
