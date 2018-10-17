@@ -31,3 +31,14 @@ img {
 	display: inline-block;
 	max-width: 100%;
 }
+
+.btn {
+	&.btn-primary {
+		background: $brandColor;
+		color: $white;
+		&:hover, &:focus, &:active, &:not(:disabled):not(.disabled):active {
+			background: $brandColorActive;
+			color: $white;
+		}
+	}
+}

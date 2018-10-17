@@ -182,9 +182,7 @@ body {
 
 .login-widget {
   padding: 0 1.5rem;
-  &.register-widget {
-    margin-bottom: 3rem;
-  }
+  margin-bottom: 3rem;
   .login-logo {
     text-align: center;
     img {
@@ -201,29 +199,11 @@ body {
   }
   .login-form {
     label {
-      color: $copyInverse;
-      font-size: $sizeXS;
-      font-weight: bold;
-      text-transform: uppercase;
-      margin: 0;
-    }
-    .form-group {
-      margin-bottom: $mb;
-    }
-    .captcha {
-      margin-bottom: .5rem;
-      img {
-        width: 100%;
-      }
+      color: $bodyInverse;
     }
     .form-control {
       color: $bodyInverse;
-      font-size: $sizeS;
-      background: none;
-      border-radius: 0;
-      border: none;
-      padding: 0;
-      border-bottom: 1px solid $copyInverse;
+      border-bottom-color: $bodyInverse;
     }
     .btn {
       font-size: $sizeM;
@@ -233,6 +213,35 @@ body {
         margin-top: $mb;
       }
     }
+  }
+}
+
+label {
+  font-size: $sizeXS;
+  color: $copy;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+.form-group {
+  margin-bottom: $mb;
+}
+.captcha {
+  margin-bottom: .5rem;
+  img {
+    width: 100%;
+  }
+}
+.form-control {
+  color: $copy;
+  font-size: $sizeS;
+  background: none;
+  border-radius: 0;
+  border: none;
+  padding: 0;
+  border-bottom: 1px solid $copy;
+  &:hover, &:focus {
+    background: none;
   }
 }
 
@@ -275,7 +284,7 @@ ul.block-link {
     + li {
       margin-top: .5rem;
     }
-    a {
+    a:not(.btn-primary) {
       display: block;
       font-size: $sizeS;
       text-transform: uppercase;
@@ -334,4 +343,44 @@ ul.block-link {
 
 .section {
   margin-bottom: $mb;
+}
+
+.product-info {
+  h5 {
+    font-size: $sizeS;
+    margin: 0 0 .75rem;
+    color: $body;
+  }
+  h2 {
+    font-size: $sizeL;
+    margin: 0 0 .75rem;
+    color: $body;
+    font-weight: bold;
+    .fa {
+      font-size: $sizeL;
+      margin-right: 1.5rem;
+    }
+  }
+  .fa {
+    margin-right: .75rem;
+    color: $brandColor;
+  }
+}
+
+.breadcrumbs {
+  padding: 0;
+  margin: 0 0 $mb;
+  display: flex;
+  li {
+    display: block;
+    + li {
+      margin-left: .5rem;
+    }
+  }
+}
+
+.product-content {
+  p {
+    font-size: $sizeXS;
+  }
 }
