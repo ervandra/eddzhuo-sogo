@@ -10,7 +10,6 @@ html {
   padding: 0;
 }
 body {
-  overflow: hidden;
   position: relative;
   background: $white;
   max-width: 600px;
@@ -22,6 +21,9 @@ body {
     background-color: #1f2532;
     background-image: -webkit-linear-gradient(107deg, #4c68b1, black 98%);
     background-image: linear-gradient(343deg, #4c68b1, black 98%);
+    #header .dashboard-menu-toggle {
+      background: none;
+    }
   }
   &.collapse {
     display: block !important;
@@ -31,11 +33,6 @@ body {
       transform: translateX(0);
     }
   }
-}
-
-.login-form {
-  min-height: 100%;
-  min-height: 100vh;
 }
 
 #header {
@@ -55,6 +52,18 @@ body {
     }
   }
   .dashboard-menu-toggle {
+    display: flex;
+    background: $body;
+    align-items: center;
+    h1 {
+      color: $bodyInverse;
+      margin: 0;
+      font-size: $sizeM;
+      text-align: center;
+      flex: 1;
+      padding-right: 60px;
+      white-space: nowrap;
+    }
     .dashboard-toggle {
       display: block;
       cursor: pointer;
@@ -76,6 +85,7 @@ body {
 
 
 #mainmenu {
+  padding-bottom: 3rem;
   ul {
     margin: 0;
     padding: 0;
@@ -100,6 +110,8 @@ body {
   position: fixed;
   z-index: 98;
   top: 0;
+  overflow: hidden;
+  overflow-y: auto;
   width: 260px;
   bottom: 0;
   height: 100vh !important;
@@ -117,7 +129,6 @@ body {
   .close-dashboard-menu {
     text-align: center;
     padding: 1.5rem;
-    margin-bottom: 1.5rem;
     position: relative;;
     h1 {
       margin: 0;
@@ -126,6 +137,9 @@ body {
       font-weight: bold;
       height: 60px;
       line-height: 60px;
+    }
+    p {
+      color: $bodyInverse;
     }
     a {
       width: 100%;
@@ -163,6 +177,9 @@ body {
 
 .login-widget {
   padding: 0 1.5rem;
+  &.register-widget {
+    margin-bottom: 3rem;
+  }
   .login-logo {
     text-align: center;
     img {
@@ -181,6 +198,7 @@ body {
     label {
       color: $copyInverse;
       font-size: $sizeXS;
+      font-weight: bold;
       text-transform: uppercase;
       margin: 0;
     }
@@ -208,6 +226,72 @@ body {
       text-transform: uppercase;
       + .btn {
         margin-top: $mb;
+      }
+    }
+  }
+}
+
+#content {
+  padding: 1.5rem 0;
+}
+
+.nav-pills {
+  display: flex;
+  margin: 0;
+  li.nav-item {
+    flex: 1;
+    text-align: center;
+    .nav-link {
+      border-radius: 0;
+      border-bottom: 2px solid transparent;
+      color: $copy;
+      text-transform: uppercase;
+      font-size: $sizeS;
+      &.active {
+        background: none;
+        border-bottom-color: $brandColor;
+        color: $copy;
+      }
+    }
+  }
+}
+.tab-content {
+  background: $grey;
+  .tab-pane {
+    padding: .75rem;
+  }
+}
+
+ul.block-link {
+  margin: 0;
+  padding: 0;
+  li {
+    display: block;
+    + li {
+      margin-top: .5rem;
+    }
+    a {
+      display: block;
+      font-size: $sizeS;
+      text-transform: uppercase;
+      color: $copy;
+      padding: .75rem 1rem;
+      background: $white;
+      transition: $transition;
+      &:hover, &:focus {
+        box-shadow: $boxShadow;
+      }
+      .fa {
+        color: $brandColor;
+        margin-right: .75rem;
+      }
+    }
+    &.disabled {
+      a {
+        opacity: .5;
+        .fa {
+           color: $body;
+        }
       }
     }
   }

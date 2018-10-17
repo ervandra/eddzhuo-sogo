@@ -8,7 +8,7 @@
   <meta name="author" content="WAP">
   <link rel="icon" href="favicon.ico">
   <title>Dashboard | WAP</title>
-  <link href="../lib/css/foundation.min.css" rel="stylesheet">
+  <link href="../lib/css/bootstrap.min.css" rel="stylesheet">
   <link href="../lib/css/fontface.min.css" rel="stylesheet">
   <link href="../lib/css/chosen.min.css" rel="stylesheet">
   <link href="../css/index.css" rel="stylesheet">
@@ -16,11 +16,93 @@
 
 <body>
 
-  <h1>Dashboard Page</h1>
+  <header id="header" class="dashboard-nav">
+    <div class="navigation">
+      <div class="dashboard-menu-toggle">
+        <a class="dashboard-toggle"><span class="fa fa-bars"></span></a>
+        <h1>Dashboard</h1>
+      </div>
+
+      <div class="dashboard-wrapper collapse-menu"></div>
+
+      <div class="dashboard-menu collapse-menu" id="dashboard-menu">
+
+        <div class="close-dashboard-menu">
+          <a href="#" class="close-menu"><span class="fa fa-close"></span></a>
+          <div class="logotype">
+            <h1><a href="#">Sogo 4d</a></h1>
+            <div class="user-info">
+              <p>Test123 | IDR 0 (0)</p>
+            </div>
+          </div>
+        </div>
+
+        <nav id="mainmenu">
+          <ul>
+            <li class="active"><a href="dashboard.html"><span class="fa fa-dashboard"></span>Dashboard</a></li>
+            <li><a href="deposit.html"><span class="fa fa-briefcase"></span>Deposit</a></li>
+            <li><a href="withdraw.html"><span class="fa fa-calendar"></span>Withdraw</a></li>
+            <li><a href="memo.html"><span class="fa fa-camera"></span>Memo</a></li>
+            <li><a href="keluaran.html"><span class="fa fa-calendar-o"></span>Keluaran Terakhir</a></li>
+            <li><a href="transaksi.html"><span class="fa fa-check-circle-o"></span>Transaksi Terakhir</a></li>
+            <li><a href="my-account.html"><span class="fa fa-user"></span>My Account</a></li>
+            <li><a href="refereal.html"><span class="fa fa-tag"></span>Refereal</a></li>
+            <li><a href="spin.html"><span class="fa fa-circle-o"></span>Spin Wheel</a></li>
+            <li><a href="live-chat.html"><span class="fa fa-comments"></span>Live Chat</a></li>
+            <li><a href="#"><span class="fa fa-sign-out"></span>Logout</a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </div>
+  </header>
+
+  <section id="content">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="section">
+            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="pills-online-tab" data-toggle="pill" href="#pills-online" role="tab"
+                  aria-controls="pills-online" aria-selected="true">Online</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pills-offline-tab" data-toggle="pill" href="#pills-offline" role="tab"
+                  aria-controls="pills-offline" aria-selected="false">Offline</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-online" role="tabpanel" aria-labelledby="pills-online-tab">
+                <ul class="block-link">
+                  <li><a href="#"><span class="fa fa-check"></span>Singapore</a></li>
+                  <li><a href="#"><span class="fa fa-check"></span>Manila</a></li>
+                  <li><a href="#"><span class="fa fa-check"></span>Barcelona</a></li>
+                  <li><a href="#"><span class="fa fa-check"></span>Hongkong</a></li>
+                  <li><a href="#"><span class="fa fa-check"></span>Berlin</a></li>
+                  <li><a href="#"><span class="fa fa-check"></span>Milan</a></li>
+                  <li><a href="#"><span class="fa fa-check"></span>singapore45</a></li>
+                </ul>
+              </div>
+              <div class="tab-pane fade" id="pills-offline" role="tabpanel" aria-labelledby="pills-offline-tab">
+                <ul class="block-link">
+                  <li class="disabled"><a href="#"><span class="fa fa-times"></span>Tokyo</a></li>
+                  <li class="disabled"><a href="#"><span class="fa fa-times"></span>Seoul</a></li>
+                  <li class="disabled"><a href="#"><span class="fa fa-times"></span>Bangkok</a></li>
+                  <li class="disabled"><a href="#"><span class="fa fa-times"></span>Sidney</a></li>
+                  <li class="disabled"><a href="#"><span class="fa fa-times"></span>Beijing</a></li>
+                  <li class="disabled"><a href="#"><span class="fa fa-times"></span>Timor</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <script src="../lib/js/jquery.js"></script>
-  <script src="../lib/js/what-input.js"></script>
-  <script src="../lib/js/foundation.min.js"></script>
+  <script src="../lib/js/bootstrap.min.js"></script>
   <script src="../lib/js/chosen.jquery.min.js"></script>
   <script src="../js/index.js"></script>
   <script>

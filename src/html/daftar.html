@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="description" content="WAP">
+  <meta name="author" content="WAP">
+  <link rel="icon" href="favicon.ico">
+  <title>Daftar | WAP</title>
+  <link href="../lib/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../lib/css/fontface.min.css" rel="stylesheet">
+  <link href="../css/index.css" rel="stylesheet">
+</head>
+
+<body class="login">
+
+  <header id="header" class="dashboard-nav">
+    <div class="navigation">
+      <div class="dashboard-menu-toggle">
+        <a class="dashboard-toggle"><span class="fa fa-bars"></span></a>
+      </div>
+
+      <div class="dashboard-wrapper collapse-menu"></div>
+
+      <div class="dashboard-menu collapse-menu" id="dashboard-menu">
+
+        <div class="close-dashboard-menu">
+          <a href="#" class="close-menu"><span class="fa fa-close"></span></a>
+          <div class="logotype">
+            <h1><a href="#">Sogo 4d</a></h1>
+          </div>
+        </div>
+
+        <nav id="mainmenu">
+          <ul>
+            <li class="active"><a href="dashboard.html"><span class="fa fa-dashboard"></span>Dashboard</a></li>
+            <li><a href="order.html"><span class="fa fa-briefcase"></span>Order</li>
+            <li><a href="product.html"><span class="fa fa-archive"></span>Product</a></li>
+            <li><a href="settings.html"><span class="fa fa-link"></span>Settings</a></li>
+            <li><a href="help.html"><span class="fa fa-question-circle"></span>Help</a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </div>
+  </header>
+
+  <div class="login-widget register-widget">
+    <div class="login-form">
+      <form action="#">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" class="form-control" placeholder="Username 6-16 karakter tanpa spasi">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" class="form-control" placeholder="Password (6 karakter atau lebih)">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" class="form-control" placeholder="Masukkan Email">
+        </div>
+        <div class="form-group">
+          <label for="telepon">Telepon</label>
+          <input type="text" id="telepon" name="telepon" class="form-control" placeholder="Masukkan Telepon">
+        </div>
+        <div class="form-group">
+          <label for="bank">Bank</label>
+          <select id="bank" name="bank" class="form-control">
+            <option value="1">BCA</option>
+            <option value="2">Mandiri</option>
+            <option value="3">BNI</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="rekening">Rekening</label>
+          <input type="text" id="rekening" name="rekening" class="form-control" placeholder="Nomor Rekening">
+        </div>
+        <div class="form-group">
+          <label for="nama-rekening">Nama Rekening</label>
+          <input type="text" id="nama-rekening" name="nama-rekening" class="form-control" placeholder="Nama sesuai rekening">
+        </div>
+        <div class="form-group">
+          <label for="referal">Referal</label>
+          <input type="text" id="referal" name="referal" class="form-control" placeholder="Username referal bila ada">
+        </div>
+        <a class="btn btn-warning btn-block btn-lg" href="dashboard.html">Sign Up</a>
+      </form>
+    </div>
+  </div>
+
+  <script src="../lib/js/jquery.js"></script>
+  <script src="../lib/js/bootstrap.min.js"></script>
+  <script src="../lib/js/chosen.jquery.min.js"></script>
+  <script src="../js/index.js"></script>
+</body>
+
+</html>
