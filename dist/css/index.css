@@ -26,7 +26,7 @@ img {
 }
 
 .container {
-    max-width: 390px;
+    max-width: 630px;
 }
 
 html {
@@ -39,7 +39,7 @@ body {
     overflow: hidden;
     position: relative;
     background: #ffffff;
-    max-width: 360px;
+    max-width: 600px;
     min-height: 100%;
     min-height: 100vh;
     padding: 0;
@@ -196,7 +196,7 @@ body.show .off-canvas {
     background: rgba(0, 0, 0, 0.3);
     display: none;
     width: 100%;
-    max-width: 360px;
+    max-width: 600px;
 }
 
 .dashboard-wrapper.show {
