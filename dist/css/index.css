@@ -380,6 +380,10 @@ ul.block-link li a .fa {
     margin-right: .75rem;
 }
 
+ul.block-link li .btn.btn-light {
+    background: #efefef;
+}
+
 ul.block-link li.disabled a {
     opacity: .5;
 }
@@ -399,4 +403,18 @@ ul.block-link li.disabled a .fa {
 
 .table-widget table td {
     font-size: 0.75rem;
+}
+
+#footer {
+    padding: 1.5rem 0;
+}
+
+#footer .copyright {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 0.875rem;
+}
+
+.section {
+    margin-bottom: 1.5rem;
 }

@@ -291,6 +291,11 @@ ul.block-link {
         margin-right: .75rem;
       }
     }
+    .btn {
+      &.btn-light {
+        background: $grey;
+      }
+    }
     &.disabled {
       a {
         opacity: .5;
@@ -316,4 +321,17 @@ ul.block-link {
       font-size: $sizeXS;
     }
   }
+}
+
+#footer {
+  padding: 1.5rem 0;
+  .copyright {
+    text-align: center;
+    color: $copy;
+    font-size: $sizeS;
+  }
+}
+
+.section {
+  margin-bottom: $mb;
 }
