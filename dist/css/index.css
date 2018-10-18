@@ -414,6 +414,30 @@ ul.block-link li.disabled a .fa {
     color: rgba(0, 0, 0, 0.87);
 }
 
+ul.links {
+    margin: 0 0 1.5rem;
+    padding: 0;
+}
+
+ul.links li {
+    display: block;
+}
+
+ul.links li + li {
+    margin-top: .75rem;
+}
+
+ul.links li a {
+    padding: .5rem 1rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+ul.links li a .fa {
+    margin-right: .75rem;
+}
+
 .table-widget table th {
     font-size: 0.875rem;
     text-align: center;

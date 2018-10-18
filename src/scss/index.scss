@@ -318,6 +318,26 @@ ul.block-link {
   }
 }
 
+ul.links {
+  margin: 0 0 $mb;
+  padding: 0;
+  li {
+    display: block;
+    + li {
+      margin-top: .75rem;
+    }
+    a {
+      padding: .5rem 1rem;
+      font-size: $sizeXS;
+      text-transform: uppercase;
+      text-align: left;
+      .fa {
+        margin-right: .75rem;
+      }
+    }
+  }
+}
+
 .table-widget {
   table {
     th {
